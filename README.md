@@ -20,3 +20,6 @@ quantitatively reason with them.
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+## Probability Comparison
+Assuming there is one ideal pivot value in a randomly ordered list of length $n$, as in, a value greater than half of the values on the list and lesser than the other half of the values on the list our probability of getting that element by simply picking the first element is $\frac{1}{n}$. Whereas the probability of picking a pivot from three different elements the first, the last, and the middle, is $\frac{3}{n}$. So there is a much higher chance of finding a useful pivot using the "Median-of-three" method.
