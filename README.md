@@ -22,4 +22,17 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 ## Probability Comparison
-Assuming there is one ideal pivot value in a randomly ordered list of length $n$, as in, a value greater than half of the values on the list and lesser than the other half of the values on the list our probability of getting that element by simply picking the first element is $\frac{1}{n}$. Whereas the probability of picking a pivot from three different elements the first, the last, and the middle, is $\frac{3}{n}$. So there is a much higher chance of finding a useful pivot using the "Median-of-three" method.
+Referring to the slide on quick-sort that suggested we have a $\frac{1}{2}$ of the array is good pivots and $\frac{1}{4}$ on the front of the array and $\frac{1}{4}$ on the back contain bad pivots. We can evaluate the probability of getting a good pivot by checking all the collections of three that we might take from the array with a median in our "Good pivot range". This means this collection of three must either contain 2 good pivots or a good pivot, a bad pivot on the high end, and a bad pivot on the low end.
+<br>
+$\frac{1}{4}$ chance of a pivot that is too small so we will denote this possibility as $L$
+<br>
+$\frac{1}{4}$ chance of a pivot that is too large so we will denote this possibility as $R$
+<br>
+$\frac{1}{2}$ chance of a good pivot so we will see this possibility as $M$
+<br>
+Our combinations of three will look something like this: $(L,M,R)$ or some combination of those following the restrictions set above.
+We calculate the individual probabilities of each combination as a product of the fractions each piece represents. Then we add all of those together to get the final fraction $\frac{11}{16}$ or the percentage $68.75$%
+
+<br>
+Sources:
+Clayton helped me out with this
